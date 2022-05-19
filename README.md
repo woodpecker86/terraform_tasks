@@ -1,7 +1,7 @@
 ### Terraform practice
 
 Output of my first manifest
-```bash
+```commandline
 Outputs:
 
 sec_groups = [

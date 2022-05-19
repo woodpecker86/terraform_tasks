@@ -17,6 +17,7 @@ provider "aws" {
   }
 }
 
+
 data "aws_security_groups" "sec_groups" {}
 
 data "aws_security_group" "epam_sg" {
@@ -27,3 +28,11 @@ data "aws_security_group" "epam_sg" {
 data "aws_vpcs" "epam_vpcs" {}
 
 data "aws_subnets" "subnets" {}
+
+module "test_module" {
+  source  = "./modules/test_module"
+  db_pass = "password"
+  subnets = data.aws_subnets.subnets.ids
+  ssh_key_path = "C:\\Users\\Admin\\Documents\\MobaXterm\\home\\.ssh\\wordpress-main-key.pem"
+  userdata = "userdata.sh"
+}
