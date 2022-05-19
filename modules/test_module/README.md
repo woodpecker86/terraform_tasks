@@ -1,6 +1,7 @@
 Test module for creating EC2 and RDS
 
-Installing nginx through userdata
+Installing nginx through userdata.
+
 Result for a test apply
 ```commandline
 module.test_module.aws_instance.test_inst: Provisioning with 'remote-exec'...
